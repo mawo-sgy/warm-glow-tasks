@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        warm: {
+          orange: "hsl(var(--warm-orange))",
+          yellow: "hsl(var(--warm-yellow))",
+          peach: "hsl(var(--warm-peach))",
+          cream: "hsl(var(--warm-cream))",
+          brown: "hsl(var(--warm-brown))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +87,53 @@ export default {
             height: "0",
           },
         },
+        "task-complete": {
+          "0%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+            opacity: "0.8",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "0.6",
+          },
+        },
+        "checkmark": {
+          "0%": {
+            strokeDasharray: "0 20",
+            transform: "scale(0.8)",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+          },
+          "100%": {
+            strokeDasharray: "20 0",
+            transform: "scale(1)",
+          },
+        },
+        "bounce-in": {
+          "0%": {
+            transform: "scale(0.3) rotate(-10deg)",
+            opacity: "0",
+          },
+          "50%": {
+            transform: "scale(1.1) rotate(5deg)",
+          },
+          "100%": {
+            transform: "scale(1) rotate(0deg)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "task-complete": "task-complete 0.6s ease-in-out forwards",
+        "checkmark": "checkmark 0.6s ease-in-out forwards",
+        "bounce-in": "bounce-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
       },
     },
   },
